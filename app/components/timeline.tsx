@@ -7,152 +7,114 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { Work, School, Star } from "@mui/icons-material";
 
+// Data for all timeline elements
+const timelineData = [
+  {
+    type: 'work',
+    date: '2011 - present',
+    title: 'Creative Director',
+    location: 'Miami, FL',
+    description: 'Creative Direction, User Experience, Visual Design, Project Management, Team Leading',
+    icon: <School />,
+    iconBgColor: '#f3de21',
+    arrowColor: '#f3de21',
+  },
+  {
+    type: 'work',
+    date: '2010 - 2011',
+    title: 'Art Director',
+    location: 'San Francisco, CA',
+    description: 'Creative Direction, User Experience, Visual Design, SEO, Online Marketing',
+    icon: <School />,
+    iconBgColor: '#f3de21',
+    arrowColor: '#f3de21',
+  },
+  {
+    type: 'work',
+    date: '2008 - 2010',
+    title: 'Web Designer',
+    location: 'Los Angeles, CA',
+    description: 'User Experience, Visual Design',
+    icon: <School />,
+    iconBgColor: '#f3de21',
+    arrowColor: '#f3de21',
+  },
+  {
+    type: 'work',
+    date: '2006 - 2008',
+    title: 'Web Designer',
+    location: 'San Francisco, CA',
+    description: 'User Experience, Visual Design',
+    icon: <School />,
+    iconBgColor: '#f3de21',
+    arrowColor: '#f3de21',
+  },
+  {
+    type: 'education',
+    date: 'April 2013',
+    title: 'Content Marketing for Web, Mobile and Social Media',
+    location: 'Online Course',
+    description: 'Strategy, Social Media',
+    icon: <School />,
+    iconBgColor: '#f34b21',
+    arrowColor: '#f34b21',
+  },
+  {
+    type: 'education',
+    date: 'November 2012',
+    title: 'Agile Development Scrum Master',
+    location: 'Certification',
+    description: 'Creative Direction, User Experience, Visual Design',
+    icon: <School />,
+    iconBgColor: '#f34b21',
+    arrowColor: '#f34b21',
+  },
+  {
+    type: 'education',
+    date: '2002 - 2006',
+    title: 'Bachelor of Science in Interactive Digital Media Visual Imaging',
+    location: 'Bachelor Degree',
+    description: 'Creative Direction, Visual Design',
+    icon: <School />,
+    iconBgColor: '#f34b21',
+    arrowColor: '#f34b21',
+  },
+  {
+    type: 'star',
+    icon: <Star />,
+    iconBgColor: '#f3de21',
+  }
+];
+
+// Timeline component
 export function Timeline() {
   return (
     <>
-      <style jsx>{`
-        .timeline-line {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 50%;
-          width: 2px; /* Adjust thickness as needed */
-          background-color: rgba(0, 0, 0, 0.12); /* Change color as needed */
-          transform: translateX(-50%);
-          z-index: 0; /* Ensure it stays behind the icons */
-        }
-
-        .vertical-timeline {
-          position: relative; /* Ensure relative positioning for absolute child */
-          padding: 0 20px; /* Add padding to prevent overlap with icons */
-        }
-
-        .vertical-timeline-element {
-          position: relative; /* Ensure timeline elements are positioned relative to the timeline */
-          z-index: 1; /* Bring timeline elements above the line */
-          background: white; /* Background color for content boxes */
-          border: 1px solid rgba(0, 0, 0, 0.1); /* Light border for visibility */
-          border-radius: 8px; /* Rounded corners */
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-        }
-
-        .vertical-timeline-element-title {
-          color: rgb(33, 150, 243); /* Title color to match the theme */
-        }
-
-        .vertical-timeline-element-subtitle {
-          color: rgba(0, 0, 0, 0.7); /* Subtitle color */
-        }
-      `}</style>
-      <VerticalTimeline className="vertical-timeline">
-        <div className="timeline-line" /> {/* Vertical line here */}
-
-        <VerticalTimelineElement
-          visible={true}
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid rgb(33, 150, 243)' }}
-          date="2011 - present"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<Work />}
-        >
-          <h3 className="vertical-timeline-element-title">Creative Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-          </p>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          visible={true}
-          className="vertical-timeline-element--work"
-          date="2010 - 2011"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<Work />}
-        >
-          <h3 className="vertical-timeline-element-title">Art Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-          </p>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          visible={true}
-          className="vertical-timeline-element--work"
-          date="2008 - 2010"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<Work />}
-        >
-          <h3 className="vertical-timeline-element-title">Web Designer</h3>
-          <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-          <p>
-            User Experience, Visual Design
-          </p>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          visible={true}
-          className="vertical-timeline-element--work"
-          date="2006 - 2008"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<Work />}
-        >
-          <h3 className="vertical-timeline-element-title">Web Designer</h3>
-          <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-          <p>
-            User Experience, Visual Design
-          </p>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          visible={true}
-          className="vertical-timeline-element--education"
-          date="April 2013"
-          iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-          icon={<School />}
-        >
-          <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-          <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-          <p>
-            Strategy, Social Media
-          </p>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          visible={true}
-          className="vertical-timeline-element--education"
-          date="November 2012"
-          iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-          icon={<School />}
-        >
-          <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-          <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design
-          </p>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          visible={true}
-          className="vertical-timeline-element--education"
-          date="2002 - 2006"
-          iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-          icon={<School />}
-        >
-          <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-          <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-          <p>
-            Creative Direction, Visual Design
-          </p>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          visible={true}
-          iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-          icon={<Star />}
-        />
-      </VerticalTimeline>
+    {/* Event Timeline title */}
+    <div className="text-center text-7xl text-[#f3de21] font-bold my-6">
+        Event Timeline
+      </div>
+    <VerticalTimeline className="relative p-5">
+      <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gray-300 z-0 transform -translate-x-1/2" /> {/* Vertical line */}
+      {
+        timelineData.map((item, index) => (
+          <VerticalTimelineElement
+            key={index}
+            visible={true}
+            className={`vertical-timeline-element--${item.type}`}
+            contentClassName="bg-transparent text-black p-6 rounded-lg shadow-lg shadow-yellow-50 border border-gray-200"
+            contentArrowClassName={`border-r-8 border-[${item.arrowColor}]`}
+            date={item.date}
+            iconClassName={`bg-[${item.iconBgColor}] text-white`}
+            icon={item.icon}
+          >
+            {item.title && <h3 className="text-black font-bold">{item.title}</h3>}
+            {item.location && <h4 className="text-gray-700">{item.location}</h4>}
+            {item.description && <p>{item.description}</p>}
+          </VerticalTimelineElement>
+        ))
+      }
+    </VerticalTimeline>
     </>
   );
 }
