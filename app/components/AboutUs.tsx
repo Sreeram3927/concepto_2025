@@ -36,7 +36,7 @@ const AboutUs: React.FC = () => {
     return (
         <motion.div
             ref={ref}
-            className="max-w-screen-2xl bg-black mx-auto px-4 py-6 md:px-8 md:py-10 mb-8"
+            className="max-w-screen-2xl bg-black mx-auto px-4 py-6 md:px-8 md:py-10" // Removed mb-8
             initial="hidden"
             animate={controls}
             variants={sectionVariants}
