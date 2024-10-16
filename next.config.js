@@ -1,10 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
+// next.config.js
+module.exports = {
     images: {
-      domains: ['th.bing.com', 'thewowstyle.com'], // Add your external image domains here
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'your-image-source.com', // Replace with actual domain
+        },
+      ],
     },
   };
   
-  module.exports = nextConfig;

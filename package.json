@@ -18,17 +18,25 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.9",
     "next": "14.2.15",
+<<<<<<< HEAD
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-vertical-timeline-component": "^3.6.0",
+=======
+    "preline": "^2.5.1",
+    "react": "^18",
+    "react-dom": "^18",
+>>>>>>> 11aa8f56455f4a0c799be0120e2adbc1ba70b151
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-vertical-timeline-component": "^3.3.6",
     "autoprefixer": "^10.4.20",
-    "eslint": "^8",
+    "daisyui": "^4.12.13",
+    "eslint": "^9",
     "eslint-config-next": "14.2.15",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
