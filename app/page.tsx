@@ -1,4 +1,7 @@
 import Image from "next/image";
+
+import Navbar  from "./components/Navbar";
+import AboutUs from "./components/AboutUs";
 import { AboutEvent} from "./components/AboutEvent";
 import { Speakers} from "./components/Speakers";
 import { Faq } from "./components/Faq";
@@ -11,11 +14,13 @@ import  Footer  from "./components/footer/footer";
 export default function Home() {
   return (
     <>
-    <AboutEvent />
-      <Speakers />
-      <Faq />
+      <Navbar />
       <Countdown />
+      <AboutUs />
+      <AboutEvent />
+      <Speakers />
       <Timeline />
+      <Faq />
       <Closing />
       <Footer />
     </>
