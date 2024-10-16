@@ -31,15 +31,20 @@ const Navbar = () => {
         >
             <nav className="relative max-w-screen-2xl w-full py-2.5 px-5 flex md:items-center justify-between md:py-0 mx-2 lg:mx-auto">
                 <div className="flex items-center justify-between">
-                    <a href="/" className="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl" aria-label="logo">
-                        <img src="/assets/Logo/IEEE-Logo.svg" alt="Gen_AI logo" className="h-8 md:h-12" />
+                    <a href="https://www.ieeesrmist.com/" target='_blank' className="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl" aria-label="logo">
+                        <img src="/assets/Logo/IEEE-Logo.svg" alt="IEEE Logo" className="h-8 md:h-12" />
+                    </a>
+                </div>
+                <div className="flex items-center justify-between">
+                    <a href="/" className="inline-flex items-center text-2xl font-zenzai text-black font-bold md:text-4xl tracking-mid" aria-label="logo">
+                        Concepto'24
                     </a>
                 </div>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
                     <div className='ps-px md:py-4 px-4'>
                         <a
-                            className="group inline-flex items-center gap-x-2 py-2 px-3 bg-cyan-400 text-black font-medium text-sm text-neutral-800 rounded-full focus:outline-none"
-                            href="https://registrations.ieeesrmist.com/"
+                            className="group inline-flex items-center gap-x-2 py-2 px-3 bg-yellow hover:bg-red cursor-pointer text-black font-alien tracking-low font-medium text-base md:text-xl hover:scale-110 transition-all duration-300 ease-in-out rounded-full focus:outline-none"
+                            // href="https://registrations.ieeesrmist.com/"
                         >
                             Register Now
                         </a>
