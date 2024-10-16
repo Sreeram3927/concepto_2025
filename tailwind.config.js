@@ -14,14 +14,17 @@ module.exports = {
  
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    'node_modules/preline/dist/*.js',
   ],
   darkMode: "class",
   theme: {
     // rest of the code
   },
   plugins: [
-    // rest of the code
+    require('daisyui'),
+    require('preline/plugin'),
     addVariablesForColors,
+    
   ],
 };
 

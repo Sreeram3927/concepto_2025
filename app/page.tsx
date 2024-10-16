@@ -1,11 +1,16 @@
 import Image from "next/image";
-import { StickyScrollRevealDemo } from "./components/test";
+import { AboutEvent} from "./components/AboutEvent";
+import { Speakers} from "./components/Speakers";
+import { Faq } from "./components/Faq";
+import Countdown from "./components/Countdown";
 
 export default function Home() {
   return (
-<>
-<h1 className="text-3xl font-bold underline">Hello world!</h1>
-<StickyScrollRevealDemo/>
-</>
+<div className="bg-black">
+  <Countdown/>
+<AboutEvent/>
+<Speakers/>
+<Faq/>
+</div>
   );
 }
