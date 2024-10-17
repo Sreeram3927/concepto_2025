@@ -17,45 +17,70 @@ const Footer = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                 transition={{ duration: 1 }}
-                className="text-center flex flex-col items-center"
+                className="text-center flex flex-col md:flex-row gap-2 items-center justify-between"
             >
-                <div>
-                    <a
-                        className="flex-none text-sm font-head font-extrabold text-neonCyan"
-                        href="#"
-                        aria-label="Brand"
+                
+                <motion.div 
+                    className="flex items-center justify-between"
+                    whileTap={{ scale: 0.9 }}
+                    whileHover={{
+                        scale: 1.2,
+                        transition: {
+                            duration: 0.25,
+                            ease: "easeInOut"
+                        }
+                    }}
+                >
+                    <a 
+                        href="/" 
+                        className="inline-flex items-center font-zenzai font-bold text-4xl tracking-mid"
+                        style={{
+                            background: 'linear-gradient(to right, #CA0F24, #FDDC4F)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',  // Ensures text is clipped to gradient
+                            transition: 'background 0.75s ease'
+                        }}
+                        aria-label="logo"
                     >
+                        Concepto'24
+                    </a>
+                </motion.div>
+
+
+                
+                <div className='flex flex-col items-center gap-1.5'>
+                    <a href='https://www.ieeesrmist.com/' target='_blank'>
                         <motion.img
-                            src="/assets/Logo/E-VOLVE.svg"
-                            alt="E-VOLVE-Logo"
-                            className="w-36 h-16"
+                            src="/assets/Logo/IEEE-Logo.svg"
+                            className="flex items-center justify-between h-16"
                             whileHover={{
                                 scale: 1.2,
                                 transition: {
-                                    duration: 0.8,
+                                    duration: 0.5,
                                     ease: "easeInOut"
                                 }
                             }}
                             whileTap={{ scale: 0.9 }}
                         />
                     </a>
-                </div>
 
-                <div className="mt-3">
-                    <p className="mb-2 font-sans font-base text-white text-normal sm:text-lg">
-                        We're part of the{' '}
-                        <a
-                            className="font-sans font-bold text-normal text-neonCyan sm:text-lg hover:text-blue-800"
-                            href="https://www.ieee.org/"
-                        >
-                            IEEE
-                        </a>{' '}
-                        family.
-                    </p>
-                    <p className="font-sans font-base text-white text-xs sm:text-normal">© 2024 IEEE SRM. All rights reserved.</p>
+                    <div className="mt-3">
+                        <p className="mb-2 font-sans font-base text-white text-normal sm:text-lg">
+                            We're part of the{' '}
+                            <a
+                                className="font-sans font-bold text-normal text-cyan-500 sm:text-lg hover:text-yellow"
+                                href="https://www.ieee.org/"
+                            >
+                                IEEE
+                            </a>{' '}
+                            family.
+                        </p>
+                        <p className="font-sans font-base text-white text-xs sm:text-normal">© 2024 IEEE SRM. All rights reserved.</p>
+                    </div>
                 </div>
 
                 <Socials />
+
             </motion.div>
         </footer>
     );
