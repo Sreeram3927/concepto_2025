@@ -1,8 +1,7 @@
-"use client"
+"use client";
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 
 export const HoverEffect = ({
@@ -12,31 +11,31 @@ export const HoverEffect = ({
   items: {
     title: string;
     description: string;
-    link: string;
   }[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [clickedIndex, setClickedIndex] = useState<number | null>(null);
 
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10",
         className
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
-          className="relative group  block p-2 h-full w-full"
+        <div
+          key={idx}
+          className="relative group block p-2 h-full w-full cursor-pointer"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
+          onClick={() => setClickedIndex(clickedIndex === idx ? null : idx)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -51,10 +50,18 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <AnimatePresence>
+              {clickedIndex === idx ? (
+                <>
+                  <CardTitle isActive>{item.title}</CardTitle>
+                  <CardDescription>{item.description}</CardDescription>
+                </>
+              ) : (
+                <CardTitle>{item.title}</CardTitle>
+              )}
+            </AnimatePresence>
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );
@@ -70,29 +77,40 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-[200px] w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 flex flex-col",
         className
       )}
     >
-      <div className="relative z-50">
-        <div className="p-4">{children}</div>
+      <div className="relative z-50 h-full flex flex-col">
+        {children}
       </div>
     </div>
   );
 };
+
 export const CardTitle = ({
   className,
   children,
+  isActive,
 }: {
   className?: string;
   children: React.ReactNode;
+  isActive?: boolean;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <motion.h4
+      className={cn(
+        "text-zinc-100 font-bold tracking-wide transition-all text-lg absolute", // Removed horizontal centering
+        { "top-0 translate-y-0": isActive, "top-1/2 translate-y-[-50%]": !isActive } // Float to the top when active
+      )}
+      initial={{ opacity: 1 }}
+      animate={isActive ? { opacity: 1 } : { opacity: 1 }}
+    >
       {children}
-    </h4>
+    </motion.h4>
   );
 };
+
 export const CardDescription = ({
   className,
   children,
@@ -101,13 +119,15 @@ export const CardDescription = ({
   children: React.ReactNode;
 }) => {
   return (
-    <p
+    <motion.p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-12 text-zinc-400 tracking-wide leading-relaxed text-sm", // Removed horizontal centering
         className
       )}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
     >
       {children}
-    </p>
+    </motion.p>
   );
 };

@@ -54,7 +54,7 @@ const content = [
 
 export function AboutEvent() {
   return (
-    <div className="w-full"> {/* Ensure full width here */}
+    <div className="w-full"> ]
       <StickyScroll content={content} />
     </div>
   );
