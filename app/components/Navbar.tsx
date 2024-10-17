@@ -35,15 +35,15 @@ const Navbar = () => {
                         <img src="/assets/Logo/IEEE-Logo.svg" alt="IEEE Logo" className="h-8 md:h-12" />
                     </a>
                 </div>
-                <div className="flex items-center justify-between">
-                    <a href="/" className="inline-flex items-center text-2xl font-zenzai text-black font-bold md:text-4xl tracking-mid" aria-label="logo">
+                {/* <div className="flex items-center justify-between">
+                    <a href="/" className="inline-flex items-center text-white text-2xl font-zenzai text-black font-bold md:text-4xl tracking-mid" aria-label="logo">
                         Concepto'24
                     </a>
-                </div>
+                </div> */}
                 <div className="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
                     <div className='ps-px md:py-4 px-4'>
                         <a
-                            className="group inline-flex items-center gap-x-2 py-2 px-3 bg-yellow hover:bg-red cursor-pointer text-black font-alien tracking-low font-medium text-base md:text-xl hover:scale-110 transition-all duration-300 ease-in-out rounded-full focus:outline-none"
+                            className="group inline-flex items-center gap-x-2 py-2 px-3 bg-yellow hover:bg-red cursor-pointer text-black font-alien tracking-low font-medium text-sm md:text-xl hover:scale-110 transition-all duration-300 ease-in-out rounded-full focus:outline-none"
                             // href="https://registrations.ieeesrmist.com/"
                         >
                             Register Now

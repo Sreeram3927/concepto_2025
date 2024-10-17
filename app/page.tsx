@@ -25,7 +25,7 @@ export default function Home() {
       <Countdown />
       <AboutUs />
       <AboutEvent />
-      <Speakers />
+      {/* <Speakers /> */}
       <Timeline />
       <Faq />
       <Closing />
