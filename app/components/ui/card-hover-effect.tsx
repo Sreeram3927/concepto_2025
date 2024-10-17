@@ -35,7 +35,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-yellow dark:bg-slate-800/[0.8] block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -101,7 +101,7 @@ export const CardTitle = ({
     <motion.h4
       className={cn(
         "text-zinc-100 font-bold tracking-wide transition-all text-lg absolute", // Removed horizontal centering
-        { "top-0 translate-y-0": isActive, "top-1/2 translate-y-[-50%]": !isActive } // Float to the top when active
+        { "top-0 translate-y-0 text-yellow": isActive, "top-1/2 translate-y-[-50%]": !isActive } // Float to the top when active
       )}
       initial={{ opacity: 1 }}
       animate={isActive ? { opacity: 1 } : { opacity: 1 }}
