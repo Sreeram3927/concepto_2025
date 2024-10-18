@@ -1,41 +1,39 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 
+interface CountdownDuration {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
 const Countdown = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 15,
-    hours: 10,
-    minutes: 24,
-    seconds: 59,
-  });
+  const targetDate = new Date('2024-10-28T00:00:00Z'); // Set the target date and time (UTC)
+
+  const getRemainingTime = (): CountdownDuration => {
+    const now = Date.now();
+    const remainingTime = Math.max(0, targetDate.getTime() - now);
+    
+    return {
+      days: Math.floor(remainingTime / 86400000),
+      hours: Math.floor((remainingTime % 86400000) / 3600000),
+      minutes: Math.floor((remainingTime % 3600000) / 60000),
+      seconds: Math.floor((remainingTime % 60000) / 1000),
+    };
+  };
+
+  const [timeLeft, setTimeLeft] = useState<CountdownDuration>(getRemainingTime());
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prevTime) => {
-        let { days, hours, minutes, seconds } = prevTime;
-
-        if (seconds > 0) {
-          seconds--;
-        } else {
-          seconds = 59;
-          if (minutes > 0) {
-            minutes--;
-          } else {
-            minutes = 59;
-            if (hours > 0) {
-              hours--;
-            } else {
-              hours = 23;
-              if (days > 0) {
-                days--;
-              } else {
-                clearInterval(timer); // Stop timer at 0
-              }
-            }
-          }
+        const remainingTime = getRemainingTime();
+        if (remainingTime.days <= 0 && remainingTime.hours <= 0 && remainingTime.minutes <= 0 && remainingTime.seconds <= 0) {
+          clearInterval(timer);
+          return { days: 0, hours: 0, minutes: 0, seconds: 0 };
         }
-
-        return { days, hours, minutes, seconds };
+        return remainingTime;
       });
     }, 1000);
 
