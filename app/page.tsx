@@ -2,14 +2,11 @@ import Head from "next/head";
 import Navbar from "./components/Navbar";
 import AboutUs from "./components/AboutUs";
 import { AboutEvent } from "./components/AboutEvent";
-import { Speakers } from "./components/Speakers";
 import { Faq } from "./components/Faq";
-import Countdown from "./components/Countdown";
 import { Closing } from "./components/closing";
 import { Timeline } from "./components/timeline";
 import Footer from "./components/footer/footer";
 import { Hero } from "./components/Hero";
-import { Hero2 } from "./components/Hero2";
 
 export default function Home() {
   return (
@@ -28,12 +25,9 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      {/* <Hero2 /> */}
       <Hero />
-      {/* <Countdown /> */}
       <AboutUs />
       <AboutEvent />
-      {/* <Speakers /> */}
       <Timeline />
       <Faq />
       <Closing />

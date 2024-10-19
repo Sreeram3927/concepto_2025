@@ -12,7 +12,7 @@ const content: { title: string; description: string | React.JSX.Element; content
     content: (
       <div className="h-full w-full flex flex-col items-center justify-center text-white">
         <Image
-          src="/img/concepto-image.png"
+          src="/img/Concepto’24.jpg"
           width={300}
           height={300}
           className="h-auto w-auto object-cover mb-4"
@@ -37,7 +37,7 @@ const content: { title: string; description: string | React.JSX.Element; content
     content: (
       <div className="h-full w-full flex flex-col items-center justify-center text-white">
         <Image
-          src="/img/tracks-image.png"
+          src="/img/tracks.png"
           width={300}
           height={300}
           className="h-auto w-auto object-cover mb-4"
@@ -53,7 +53,7 @@ const content: { title: string; description: string | React.JSX.Element; content
     content: (
       <div className="h-full w-full flex flex-col items-center justify-center text-white">
         <Image
-          src="/img/speaker-image.png"
+          src="/img/speaker.png"
           width={300}
           height={300}
           className="h-auto w-auto object-cover mb-4"

@@ -26,7 +26,7 @@ export function Hero() {
           </a>
         </h2>
         <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
-            Flagship Event YAyyyy
+          Ignite Your Design Genius.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
