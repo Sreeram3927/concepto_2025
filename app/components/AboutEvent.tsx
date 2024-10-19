@@ -63,7 +63,7 @@ const content: { title: string; description: string | React.JSX.Element; content
     ),
   },
   {
-    title: " ", // Title with hidden visibility
+    title: <div style={{ visibility: 'hidden' }}> . </div>, // Title with hidden visibility
     description: " ",
     content: (
       <div className="h-full w-full flex flex-col items-center justify-center text-white">
@@ -79,7 +79,7 @@ const content: { title: string; description: string | React.JSX.Element; content
     ),
   },
     {
-    title: " ", // Title with hidden visibility
+    title: <div style={{ visibility: 'hidden' }}> . </div>, // Title with hidden visibility
     description: " ",
     content: (
       <div className="h-full w-full flex flex-col items-center justify-center text-white">
@@ -95,7 +95,7 @@ const content: { title: string; description: string | React.JSX.Element; content
     ),
   },
   {
-    title: " ", // Title with hidden visibility
+    title: <div style={{ visibility: 'hidden' }}> . </div>, // Title with hidden visibility
     description: " ",
     content: (
       <div className="h-full w-full flex flex-col items-center justify-center text-white">
