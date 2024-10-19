@@ -126,9 +126,10 @@ export function Timeline() {
   return (
     <>
       {/* Event Timeline title */}
-      <div className="text-center text-7xl text-[#FDDC45] font-bold my-6">
-        Event Timeline
+      <div className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#FDDC45] font-bold my-6">
+       Event Timeline
       </div>
+
       <VerticalTimeline className="relative p-5">
         <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gray-300 z-0 transform -translate-x-1/2" /> {/* Vertical line */}
         {
@@ -158,7 +159,7 @@ export function Timeline() {
           ))
         }
       </VerticalTimeline>
-      <div className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#FDDC45] font-bold my-6">
+      <div className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#CA0F24] font-bold my-6">
        End
       </div>
     </>
