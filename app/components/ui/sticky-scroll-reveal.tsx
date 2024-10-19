@@ -122,9 +122,8 @@ export const StickyScroll = ({
             {/* Right Image Section */}
             <div className="w-1/2 flex justify-end">
               <motion.div
-                style={{ background: backgroundGradient }}
                 className={cn(
-                  "h-full w-full max-w-[400px] max-h-[80vh] rounded-md bg-white sticky top-10 overflow-hidden", // Constrain height with max-h
+                  "h-full w-full max-w-[400px] max-h-[80vh] rounded-md bg-transparent sticky top-10 overflow-hidden", // Constrain height with max-h
                   contentClassName
                 )}
               >
