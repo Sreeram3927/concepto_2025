@@ -12,14 +12,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Concepto 2024</title>
+        <title>Concepto 2024 - Unleash Your Creativity in Tech & Design</title>
         <meta
           name="description"
-          content="Unlock Exclusive Access to Exciting Events and Workshops"
+          content="Join Concepto 2024 for exciting hackathons, design challenges, and workshops. Elevate your tech skills, collaborate with innovators, and showcase your creativity. Open to all tech enthusiasts!"
         />
         <meta
           name="keywords"
-          content="Hackathon, Tech Challenge, Coding Competition, Innovation Contest, E-VOLVE, GenAi, Workshop, Hactrix-24, PROTOCOL 1.0, ByteBurst, Igniting Innovation, Digital Era Tech Event, Coding, Programming, Software Development, Tech Trends, Innovation Showcase, IEEE SRM Student Branch, Student Collaboration, Student Tech Enthusiasts, Student Innovation Network, Inclusivity in Tech, Diversity in Innovation, Women in Technology, Tech for All, Tech Networking, Collaboration Opportunities, Team Building, Industry Connections, Technical Skills, Learning and Growth, Skill Enhancement, Professional Development, Register for Hactrix-24, Tech Event Registration, ByteBurst Registration, Hackathon Signup, Mentorship Program, Tech Mentors, Guidance and Support, Learn from Experts, Project Awards, Recognition in Tech, Certificates for Innovation, Outstanding Projects"
+          content="Concepto 2024, Hackathon, Designathon, UI/UX Workshop, Coding Challenge, Innovation, GenAI, IEEE SRM Student Branch, Tech Collaboration, Tech Enthusiasts, Software Development, ByteBurst, Hactrix-24, PROTOCOL 1.0, Digital Era, Student Innovation, Inclusivity in Tech, Tech Mentorship, Skill Development, Project Awards, Team Building, Tech Networking, Professional Growth, Coding Competition, Registration"
         />
         <link rel="icon" href="/favicon.ico?v=2" />
       </Head>

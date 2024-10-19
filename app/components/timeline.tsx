@@ -84,10 +84,15 @@ const timelineData = [
 // Timeline component
 export function Timeline() {
   return (
-    <>
+    <section className="max-w-screen-2xl bg-black mx-auto px-4 py-6 md:px-8 md:py-10">
       {/* Event Timeline title */}
-      <div className="text-center text-7xl text-[#FDDC45] font-bold my-6">
+      <div className="text-center text-5xl md:text-7xl text-[#FDDC45] font-bold my-6">
         Event Timeline
+      </div>
+      <div className="text-center text-lg md:text-2xl text-gray-300 leading-relaxed mb-10 px-2 md:px-16">
+        Welcome to our 2-Day Designathon, a thrilling event where creativity, learning, and problem-solving come together.
+        The first day is dedicated to mastering UI/UX principles, while the second day will be an action-packed hackathon,
+        allowing participants to put their new skills to the test!
       </div>
       <VerticalTimeline className="relative p-5">
         <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gray-300 z-0 transform -translate-x-1/2" /> {/* Vertical line */}
@@ -105,9 +110,9 @@ export function Timeline() {
                 boxShadow: '0 4px 15px rgba(255, 223, 69, 0.5)', // Shadow equivalent to shadow-lg shadow-yellow-50
                 border: '1px solid #e5e7eb', // Equivalent to border border-gray-200
               }}
-              contentArrowStyle={{ borderRight: `8px solid ${item.arrowColor}` }}  
+              contentArrowStyle={{ borderRight: `8px solid ${item.arrowColor}` }}
               date={item.date}
-              iconStyle={{ backgroundColor: item.iconBgColor, color: 'white' }}  
+              iconStyle={{ backgroundColor: item.iconBgColor, color: 'white' }}
               icon={item.icon}
             >
               {item.title && <h3 className="text-black font-bold">{item.title}</h3>}
@@ -120,6 +125,6 @@ export function Timeline() {
       <div className="text-center text-4xl text-[#FDDC45] font-bold my-6">
         End
       </div>
-    </>
+    </section>
   );
 }

@@ -21,7 +21,7 @@ export function Faq() {
   return (
     <section ref={ref}>
       <motion.div
-        className="max-w-screen-2xl mx-auto px-4 py-6 md:px-8 md:py-10"
+        className="max-w-screen-2xl mx-auto bg-black px-4 py-6 md:px-8 md:py-10"
         initial="hidden"
         animate={controls}
         variants={{
@@ -46,34 +46,65 @@ export function Faq() {
   );
 }
 export const projects = [
+  // {
+  //   title: "What is Concepto 2024?",
+  //   description:
+  //     "Concepto 2024 is a two-day event packed with exciting hackathons, designathons, workshops, and challenges aimed at helping participants enhance their tech and design skills. Whether you’re a seasoned developer, designer, or just getting started, Concepto 2024 is a great platform to learn, collaborate, and innovate.",
+  // },
   {
-    title: "Click me to expand",
+    title: "Who can participate in Concepto 2024?",
     description:
-      "We're no strangers to love, You know the rules and so do I (do I), A full commitment's what I'm thinking of, You wouldn't get this from any other guy",
+      "Concepto 2024 is open to all students and tech enthusiasts! Whether you're a beginner or an experienced coder/designer.",
   },
   {
-    title: "Netflix",
+    title: "Is there a registration fee?",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+      "Yes, there is a registration fee: INR 170 for IEEE members and INR 199 for non-members. The fee covers access to all events, workshops, and resources provided during the two days.",
+  },
+  // {
+  //   title: "How do I register for the event?",
+  //   description:
+  //     "You can register for the event by clicking on the Register button on our official Concepto 2024 webpage. Make sure to complete the registration process and pay the required fees to secure your spot.",
+  // },
+  {
+    title: "What should I bring to the event?",
+    description:
+      "Bring a laptop, charger, and any other equipment you might need for coding or designing. Make sure your development environment is set up beforehand to maximize your productivity.",
   },
   {
-    title: "Google",
+    title: "Will there be mentorship or guidance during the event?",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
+      "Yes, we will have mentors available throughout the event to help guide participants through the workshops and the hackathon.",
+  },
+  // {
+  //   title: "What is the structure of the event?",
+  //   description:
+  //     "The event is divided into two main parts: Day 1 focuses on learning, with workshops on UI/UX design, coding best practices, and design principles. Day 2 features a hackathon and designathon where participants can apply the knowledge gained from Day 1 to create projects, prototypes, or designs.",
+  // },
+  {
+    title: "Are there prizes or awards?",
+    description:
+      "Yes, participants have the chance to win exciting prizes and recognition for outstanding projects. Details on prizes will be announced during the event.",
   },
   {
-    title: "Meta",
+    title: "Do I need to have a team?",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
+      "You can participate solo or in teams. If you don't have a team, you will have the opportunity to connect with other participants at the event to form teams.",
   },
   {
-    title: "Amazon",
+    title: "Where will the event be held?",
     description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
+      "The event will take place at Mini Hall 2 (T P Ganesan). More specific instructions regarding the venue will be shared with registered participants closer to the event.",
   },
   {
-    title: "Microsoft",
+    title: "Will I receive a certificate for participating?",
     description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+      "Yes, all participants will receive a certificate of participation. Special awards will also be given to standout teams or individuals.",
+  },
+  {
+    title: "What is the cancellation/refund policy?",
+    description:
+      "Unfortunately, registration fees are non-refundable. However, if there are unforeseen circumstances, we will notify participants and explore potential alternatives.",
   },
 ];
+
