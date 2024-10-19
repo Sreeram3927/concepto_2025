@@ -97,7 +97,14 @@ export function Timeline() {
               key={index}
               visible={true}
               className={`vertical-timeline-element--${item.type}`}
-              contentClassName="bg-transparent text-black p-6 rounded-lg shadow-lg shadow-yellow-50 border border-gray-200"
+              contentStyle={{
+                backgroundColor: 'transparent',
+                color: 'black',
+                padding: '1.5rem', // Equivalent to p-6
+                borderRadius: '0.5rem', // Equivalent to rounded-lg
+                boxShadow: '0 4px 15px rgba(255, 223, 69, 0.5)', // Shadow equivalent to shadow-lg shadow-yellow-50
+                border: '1px solid #e5e7eb', // Equivalent to border border-gray-200
+              }}
               contentArrowStyle={{ borderRight: `8px solid ${item.arrowColor}` }}  
               date={item.date}
               iconStyle={{ backgroundColor: item.iconBgColor, color: 'white' }}  
