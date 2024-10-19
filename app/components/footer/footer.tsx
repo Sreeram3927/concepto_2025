@@ -33,7 +33,7 @@ const Footer = () => {
                 >
                     <a 
                         href="/" 
-                        className="inline-flex items-center font-zenzai font-bold text-4xl tracking-mid"
+                        className="inline-flex items-center font-godfather text-4xl tracking-mid"
                         style={{
                             background: 'linear-gradient(to right, #CA0F24, #FDDC4F)',
                             WebkitBackgroundClip: 'text',

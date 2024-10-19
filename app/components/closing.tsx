@@ -28,14 +28,15 @@ export function Closing() {
         </div>
         {/* Image */}
         <div>
-        <img
+          <img
             src="img/grp_pic.jpeg"
             alt="Description of the image"
             className="w-full h-auto object-cover rounded-lg transition-transform duration-300 hover:scale-105 filter grayscale"
           />
-          
+
         </div>
       </div>
+      
     </BackgroundBeamsWithCollision>
   );
 }
