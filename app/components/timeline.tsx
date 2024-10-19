@@ -78,11 +78,6 @@ const timelineData = [
     icon: <School />,
     iconBgColor: '#FDDC4F',
     arrowColor: '#FDDC4F',
-  },
-  {
-    type: 'star',
-    icon: <Star />,
-    iconBgColor: '#FDDC4F',
   }
 ];
 
@@ -91,7 +86,7 @@ export function Timeline() {
   return (
     <>
       {/* Event Timeline title */}
-      <div className="text-center text-7xl text-[#f3de21] font-bold my-6">
+      <div className="text-center text-7xl text-[#FDDC45] font-bold my-6">
         Event Timeline
       </div>
       <VerticalTimeline className="relative p-5">
@@ -115,6 +110,9 @@ export function Timeline() {
           ))
         }
       </VerticalTimeline>
+      <div className="text-center text-4xl text-[#FDDC45] font-bold my-6">
+        End
+      </div>
     </>
   );
 }
