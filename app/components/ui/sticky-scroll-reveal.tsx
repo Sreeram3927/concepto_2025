@@ -9,8 +9,8 @@ export const StickyScroll = ({
   contentClassName,
 }: {
   content: {
-    title: string;
-    description: string;
+    title: string | React.JSX.Element;
+    description: string | React.JSX.Element;
     content?: React.ReactNode | any;
   }[];
   contentClassName?: string;
@@ -88,7 +88,7 @@ export const StickyScroll = ({
             <div className="w-1/2 pr-8">
               <div className="max-w-full">
                 {content.map((item, index) => (
-                  <div key={item.title + index} className="my-20">
+                  <div key={String(item.title) + index} className="my-20">
                     <motion.h2
                       initial={{ opacity: 0 }}
                       animate={{ opacity: activeCard === index ? 1 : 0.3 }}
@@ -96,13 +96,25 @@ export const StickyScroll = ({
                     >
                       {item.title}
                     </motion.h2>
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                      className="text-lg text-slate-300 mt-4"
-                    >
-                      {item.description}
-                    </motion.p>
+
+                    {/* Conditionally render description based on its content */}
+                    {typeof item.description === "string" ? (
+                      <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: activeCard === index ? 1 : 0.3 }}
+                        className="text-lg text-slate-300 mt-4"
+                      >
+                        {item.description}
+                      </motion.p>
+                    ) : (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: activeCard === index ? 1 : 0.3 }}
+                        className="text-lg text-slate-300 mt-4"
+                      >
+                        {item.description}
+                      </motion.div>
+                    )}
                   </div>
                 ))}
               </div>
