@@ -38,7 +38,7 @@ const content: { title: string | React.JSX.Element; description: string | React.
           src="/img/tracks.png"
           width={300}
           height={300}
-          className="h-auto w-auto object-cover mb-4"
+          className="h-auto object-fit mb-4"
           alt="Tracks"
         />
       </div>
@@ -54,7 +54,7 @@ const content: { title: string | React.JSX.Element; description: string | React.
           src="/img/speaker.png"
           width={300}
           height={300}
-          className="h-auto w-auto object-cover mb-4"
+          className="h-auto w-auto object-cover rounded-lg mb-4"
           alt="Speaker"
         />
       </div>
@@ -65,13 +65,13 @@ const content: { title: string | React.JSX.Element; description: string | React.
     description: " ",
     content: (
       <div className="h-full w-full flex flex-col items-center justify-center text-white">
-        <Image
+        {/* <Image
           src="/img/content-image.png"
           width={300}
           height={300}
           className="h-auto w-auto object-cover mb-4"
           alt="Running out of content"
-        />
+        /> */}
       </div>
     ),
   },
@@ -80,13 +80,13 @@ const content: { title: string | React.JSX.Element; description: string | React.
     description: " ",
     content: (
       <div className="h-full w-full flex flex-col items-center justify-center text-white">
-        <Image
+        {/* <Image
           src="/img/content-image.png"
           width={300}
           height={300}
           className="h-auto w-auto object-cover mb-4"
           alt="Running out of content"
-        />
+        /> */}
       </div>
     ),
   },

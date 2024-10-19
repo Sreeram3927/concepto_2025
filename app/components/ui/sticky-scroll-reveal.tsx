@@ -38,21 +38,14 @@ export const StickyScroll = ({
     setActiveCard(closestBreakpointIndex);
   });
 
+  // Define gradients that transition from black to a color and back to black
   const linearGradients = [
-    "linear-gradient(to bottom right, #CA0F24, #FDDC4F)", // Red to yellow
-    "linear-gradient(to bottom right, #D32F2F, #FFEB3B)", // Another shade of red to yellow
-    "linear-gradient(to bottom right, #FF5722, #FFC107)", // Orange to yellow transition
+    "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(202, 15, 36, 0.5), rgba(0, 0, 0, 1))", // Black to yellow back to black
+    "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(211, 47, 47, 0.5), rgba(0, 0, 0, 1))", // Black to orange back to black
+    "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 87, 34, 0.5), rgba(0, 0, 0, 1))", // Black to red back to black
   ];
 
-  const backgroundGradients = [
-    "linear-gradient(to bottom right, #A52A2A, #E0C078)", // Muted red to dull yellow
-    "linear-gradient(to bottom right, #B03A3A, #D4C468)", // Muted red to pale yellow
-    "linear-gradient(to bottom right, #D2691E, #D8B76C)", // Muted orange to muted yellow
-  ];
-
-  const [backgroundGradient, setBackgroundGradient] = useState(
-    linearGradients[0]
-  );
+  const [backgroundGradient, setBackgroundGradient] = useState(linearGradients[0]);
 
   useEffect(() => {
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
@@ -76,7 +69,7 @@ export const StickyScroll = ({
 
       <motion.div
         animate={{
-          background: backgroundGradients[activeCard % backgroundGradients.length],
+          background: backgroundGradient,
         }}
         className="h-[100vh] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10 scrollbar-hidden"
         ref={ref}

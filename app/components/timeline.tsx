@@ -86,13 +86,16 @@ export function Timeline() {
   return (
     <section className="max-w-screen-2xl bg-black mx-auto px-4 py-6 md:px-8 md:py-10">
       {/* Event Timeline title */}
-      <div className="text-center text-5xl md:text-7xl text-[#FDDC45] font-bold my-6">
+      <h2 className="mb-4 md:mb-6 font-sans text-center font-bold text-white text-2xl sm:text-4xl">
         Event Timeline
-      </div>
-      <div className="text-center text-lg md:text-2xl text-gray-300 leading-relaxed mb-10 px-2 md:px-16">
+      </h2>
+      <h4 className="max-w-screen-md mx-auto font-sans font-base text-neutral-400 text-sm sm:text-lg">
         Welcome to our 2-Day Designathon, a thrilling event where creativity, learning, and problem-solving come together.
         The first day is dedicated to mastering UI/UX principles, while the second day will be an action-packed hackathon,
         allowing participants to put their new skills to the test!
+      </h4>
+      <div className="text-center text-4xl text-[#FDDC45] font-bold mt-6">
+       Start
       </div>
       <VerticalTimeline className="relative p-5">
         <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gray-300 z-0 transform -translate-x-1/2" /> {/* Vertical line */}
@@ -122,7 +125,7 @@ export function Timeline() {
           ))
         }
       </VerticalTimeline>
-      <div className="text-center text-4xl text-[#FDDC45] font-bold my-6">
+      <div className="text-center text-4xl text-[#FDDC45] font-bold mb-6">
         End
       </div>
     </section>
