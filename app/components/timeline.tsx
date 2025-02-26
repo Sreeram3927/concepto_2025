@@ -1,172 +1,155 @@
-'use client';
+import Image from "next/image";
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import { School, Star } from "@mui/icons-material";
+import { Timeline } from "./ui/timeline";
 
-// Data for all timeline elements
-const timelineData = [
-  {
-    type: 'work',
-    date: 'Day 1: 9:00 AM - 9:15 AM',
-    title: 'Welcome and Introduction',
-    location: 'Workshop on UI/UX',
-    description: 'Overview of workshop objectives and agenda. Welcome speech by IEEE club coordinator or guest speaker.',
-    icon: <School />,
-    iconBgColor: '#FDDC4F',
-  },
-  {
-    type: 'work',
-    date: 'Day 1: 9:15 AM - 10:30 AM',
-    title: 'Introduction to UI/UX Basics',
-    location: 'Workshop on UI/UX',
-    description: 'Understanding UI/UX fundamentals, differences, and importance. Role of UI/UX in design process and case studies.',
-    icon: <School />,
-    iconBgColor: '#FDDC4F',
-  },
-  {
-    type: 'work',
-    date: 'Day 1: 11:00 AM - 12:30 PM',
-    title: 'Hands-on Session: Basic UI/UX Design Tools',
-    location: 'Workshop on UI/UX',
-    description: 'Introduction to Figma and other tools. Creating wireframes or prototypes of a basic web/app interface.',
-    icon: <School />,
-    iconBgColor: '#FDDC4F',
-  },
-  {
-    type: 'work',
-    date: 'Day 1: 1:30 PM - 2:30 PM',
-    title: 'Advanced Docker and Kubernetes',
-    location: 'Workshop on UI/UX',
-    description: 'Deep dive into Docker and Kubernetes for containerized environments.',
-    icon: <School />,
-    iconBgColor: '#FDDC4F',
-  },
-  {
-    type: 'work',
-    date: 'Day 1: 3:15 PM - 4:30 PM',
-    title: 'Workshop on PCB Design & Concepts',
-    location: 'Workshop on UI/UX',
-    description: 'PCB design concepts for industrial applications.',
-    icon: <School />,
-    iconBgColor: '#FDDC4F',
-  },
-  {
-    type: 'work',
-    date: 'Day 2: 9:15 AM - 10:15 AM',
-    title: 'Problem Statement Presentation',
-    location: 'Designathon',
-    description: 'Problem statement presentation via PPT, collected through Google Forms.',
-    icon: <School />,
-    iconBgColor: '#CA0F24',
-  },
-  {
-    type: 'work',
-    date: 'Day 2: 10:45 AM - 11:30 AM',
-    title: 'Mentorship Session Round 1',
-    location: 'Designathon',
-    description: 'Feedback session for Designathon participants.',
-    icon: <School />,
-    iconBgColor: '#CA0F24',
-  },
-  {
-    type: 'work',
-    date: 'Day 2: 11:30 AM - 12:30 PM',
-    title: 'Prototyping Phase',
-    location: 'Designathon',
-    description: 'Teams work on building prototypes.',
-    icon: <School />,
-    iconBgColor: '#CA0F24',
-  },
-  {
-    type: 'work',
-    date: 'Day 2: 1:30 PM - 2:30 PM',
-    title: 'Mentorship Session Round 2',
-    location: 'Designathon',
-    description: 'Second feedback session on prototypes.',
-    icon: <School />,
-    iconBgColor: '#CA0F24',
-  },
-  {
-    type: 'work',
-    date: 'Day 2: 2:45 PM - 4:00 PM',
-    title: 'Final Presentations and Feedback',
-    location: 'Designathon',
-    description: 'Teams present their final prototypes and receive feedback.',
-    icon: <Star />,
-    iconBgColor: '#CA0F24',
-  },
-  {
-    type: 'work',
-    date: 'Day 2: 3:00 PM - 4:30 PM',
-    title: 'Judging and Award Ceremony',
-    location: 'Designathon',
-    description: 'The best designs are awarded based on criteria set by the judges.',
-    icon: <Star />,
-    iconBgColor: '#CA0F24',
-  }
-];
-
-// Timeline component
-export function Timeline() {
+export function TimelineDemo() {
+  const data = [
+    {
+      title: "2025",
+      content: (
+        <div>
+          <p className="text-neutral-800 text-white white:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          </p>
+          <div className="grid grid-cols-2 gap-4 ">
+            <Image
+              src="https://assets.aceternity.com/templates/startup-1.webp"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full border border-white/50 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="https://assets.aceternity.com/templates/startup-2.webp"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full border border-white/50 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="https://assets.aceternity.com/templates/startup-3.webp"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full border border-white/50 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="https://assets.aceternity.com/templates/startup-4.webp"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full border border-white/50 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Early 2023",
+      content: (
+        <div>
+          <p className="text-neutral-800 text-white White:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            I usually run out of copy, but when I see content this big, I try to
+            integrate lorem ipsum.
+          </p>
+          <p className="text-neutral-800 text-white dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Lorem ipsum is for people who are too lazy to write copy. But we are
+            not. Here are some more example of beautiful designs I built.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <Image
+              src="https://assets.aceternity.com/pro/hero-sections.png"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full border border-white/50 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="https://assets.aceternity.com/features-section.png"
+              alt="feature template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full border border-white/50 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="https://assets.aceternity.com/pro/bento-grids.png"
+              alt="bento template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full border border-white/50 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="https://assets.aceternity.com/cards.png"
+              alt="cards template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full border border-white/50 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Changelog",
+      content: (
+        <div>
+          <p className="text-neutral-800 text-white dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            Deployed 5 new components on Aceternity today
+          </p>
+          <div className="mb-8">
+            <div className="flex gap-2 items-center text-white-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Card grid component
+            </div>
+            <div className="flex gap-2 items-center text-white-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Startup template Aceternity
+            </div>
+            <div className="flex gap-2 items-center text-white-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Random file upload lol
+            </div>
+            <div className="flex gap-2 items-center text-white-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Himesh Reshammiya Music CD
+            </div>
+            <div className="flex gap-2 items-center text-white-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Salman Bhai Fan Club registrations open
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <Image
+              src="https://assets.aceternity.com/pro/hero-sections.png"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full border border-white/50 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="https://assets.aceternity.com/features-section.png"
+              alt="feature template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full border border-white/50 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="https://assets.aceternity.com/pro/bento-grids.png"
+              alt="bento template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full border border-white/50 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="https://assets.aceternity.com/cards.png"
+              alt="cards template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full border border-white/50 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
+  ];
   return (
-    <section className="max-w-screen-2xl bg-black mx-auto px-4 py-6 md:px-8 md:py-10">
-      {/* Event Timeline title */}
-      <h2 className="mb-4 md:mb-6 font-sans text-center font-bold text-white text-2xl sm:text-4xl">
-        Event Timeline
-      </h2>
-      <h4 className="max-w-screen-md mx-auto font-sans font-base text-neutral-400 text-sm sm:text-lg">
-        Welcome to our 2-Day Designathon, a thrilling event where creativity, learning, and problem-solving come together.
-        The first day is dedicated to mastering UI/UX principles, while the second day will be an action-packed hackathon,
-        allowing participants to put their new skills to the test!
-      </h4>
-      <div className="text-center text-4xl text-yellow font-bold mt-6">
-       Start
-      </div>
-
-      <VerticalTimeline className="relative p-5">
-        <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gray-300 z-0 transform -translate-x-1/2" /> {/* Vertical line */}
-        {
-          timelineData.map((item, index) => (
-            <VerticalTimelineElement
-              key={index}
-              visible={true}
-              className={`vertical-timeline-element--${item.type}`}
-              contentStyle={{
-                backgroundColor: 'transparent',
-                color: 'black',
-                padding: '1.5rem',
-                borderRadius: '0.5rem',
-                boxShadow: `0 4px 15px rgba(${hexToRGB(item.iconBgColor, 0.5)})`, // Dynamically set box shadow
-                border: `1px solid ${item.iconBgColor}`,
-              }}
-              contentArrowStyle={{ borderRight: `8px solid ${item.iconBgColor}` }}  // Set arrow color to iconBgColor
-              date={item.date} // Pass the date as a string
-              iconStyle={{ backgroundColor: item.iconBgColor, color: 'white' }}  
-              icon={item.icon}
-            >
-              {item.title && <h3 className="text-white font-bold">{item.title}</h3>}
-              {item.location && <h4 className="text-white">{item.location}</h4>}
-              {item.description && <p className="text-white">{item.description}</p>}
-            </VerticalTimelineElement>
-          ))
-        }
-      </VerticalTimeline>
-      <div className="text-center text-4xl text-red font-bold mb-6">
-       End
-      </div>
-    </section>
+    <div className="w-full">
+      <Timeline data={data} />
+    </div>
   );
-}
-
-// Utility function to convert hex color to RGB for box shadow
-function hexToRGB(hex: string, alpha: number) {
-  let r = parseInt(hex.slice(1, 3), 16);
-  let g = parseInt(hex.slice(3, 5), 16);
-  let b = parseInt(hex.slice(5, 7), 16);
-
-  return `${r}, ${g}, ${b}, ${alpha}`;
 }
