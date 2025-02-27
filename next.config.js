@@ -4,7 +4,9 @@ module.exports = {
       remotePatterns: [
         {
           protocol: 'https',
-          hostname: 'your-image-source.com', // Replace with actual domain
+          //hostname: 'images.unsplash.com', // Replace with actual domain
+          //hostname: 'assets.aceternity.com', // Replace with actual domain
+
         },
       ],
     },

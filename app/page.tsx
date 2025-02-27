@@ -7,6 +7,7 @@ import { Closing } from "./components/closing";
 import { Timeline } from "./components/timeline";
 import Footer from "./components/footer/footer";
 import { Hero } from "./components/Hero";
+import { Workshop } from "./components/Workshop";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <AboutUs />
       <AboutEvent />
       <Timeline />
+      <Workshop/>
       <Faq />
       <Closing />
       <Footer />
