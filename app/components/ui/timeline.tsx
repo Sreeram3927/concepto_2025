@@ -13,10 +13,10 @@ interface TimelineEntry {
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
-  const ref = useRef<HTMLDivElement>(null); 
+  const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const lastImageRef = useRef<HTMLImageElement>(null); 
-  const [height, setHeight] = useState(0);
+  const lastImageRef = useRef<HTMLDivElement>(null);
+  const [timelineHeight, setTimelineHeight] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -28,23 +28,18 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   useEffect(() => {
     if (ref.current && lastImageRef.current) {
-      const containerRect = ref.current.getBoundingClientRect();
-      const lastImageRect = lastImageRef.current.getBoundingClientRect();
-      
-      if (isMobile) {
-        setHeight(lastImageRect.bottom - containerRect.top); 
-      } else {
-        setHeight(containerRect.height);
-      }
+      const containerTop = ref.current.getBoundingClientRect().top + window.scrollY;
+      const lastImageBottom = lastImageRef.current.getBoundingClientRect().bottom + window.scrollY;
+      setTimelineHeight(lastImageBottom - containerTop);
     }
-  }, [ref, lastImageRef, isMobile]);
+  }, [data, isMobile]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start 10%", "end 50%"],
   });
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
+  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, timelineHeight]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
@@ -76,22 +71,22 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
+            <div
+              className="relative pl-20 pr-4 md:pl-4 w-full"
+              ref={index === data.length - 1 ? lastImageRef : undefined}
+            >
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
-              {React.cloneElement(item.content as React.ReactElement, {
-                ref: index === data.length - 1 ? lastImageRef : undefined,
-              })}
+              {item.content}
             </div>
           </div>
         ))}
 
+        {/* Timeline Bar */}
         <div
-          style={{
-            height: height + "px",
-          }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+          style={{ height: timelineHeight }}
+          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
         >
           <motion.div
             style={{
