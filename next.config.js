@@ -1,12 +1,11 @@
 // next.config.js
 module.exports = {
-    images: {
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'your-image-source.com', // Replace with actual domain
-        },
-      ],
-    },
-  };
-  
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'assets.aceternity.com',
+      },
+    ],
+  },
+};
