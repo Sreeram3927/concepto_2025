@@ -4,9 +4,10 @@ import AboutUs from "./components/AboutUs";
 import { AboutEvent } from "./components/AboutEvent";
 import { Faq } from "./components/Faq";
 import { Closing } from "./components/closing";
-import { Timeline } from "./components/timeline";
+import { Timeline } from "./components/ui/timeline";
 import Footer from "./components/footer/footer";
 import { Hero } from "./components/Hero";
+import { TimelineDemo } from "./components/timeline";
 import { Workshop } from "./components/Workshop";
 
 export default function Home() {
@@ -28,9 +29,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <AboutUs />
-      <AboutEvent />
-      <Timeline />
       <Workshop/>
+      <TimelineDemo /> 
       <Faq />
       <Closing />
       <Footer />
