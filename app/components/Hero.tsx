@@ -22,7 +22,7 @@ export function Hero() {
             }}
             aria-label="logo"
           >
-            Concepto'24
+            Concepto'25
           </a>
         </h2>
         <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">

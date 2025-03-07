@@ -9,7 +9,7 @@ interface CountdownDuration {
 }
 
 const Countdown = () => {
-  const targetDate = new Date('2024-10-28T00:00:00Z'); // Set the target date and time (UTC)
+  const targetDate = new Date('2025-03-17T00:00:00Z'); // Set the target date and time (UTC)
 
   const getRemainingTime = (): CountdownDuration => {
     const now = Date.now();
