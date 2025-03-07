@@ -8,6 +8,7 @@ import { Timeline } from "./components/ui/timeline";
 import Footer from "./components/footer/footer";
 import { Hero } from "./components/Hero";
 import { TimelineDemo } from "./components/timeline";
+import { Workshop } from "./components/Workshop";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <AboutUs />
-      <AboutEvent />
+      <Workshop/>
       <TimelineDemo /> 
       <Faq />
       <Closing />
