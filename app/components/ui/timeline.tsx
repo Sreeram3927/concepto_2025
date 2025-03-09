@@ -26,12 +26,25 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
+  // Recalculate timelineHeight on scroll and resize
   useEffect(() => {
-    if (ref.current && lastImageRef.current) {
-      const containerTop = ref.current.getBoundingClientRect().top + window.scrollY;
-      const lastImageBottom = lastImageRef.current.getBoundingClientRect().bottom + window.scrollY;
-      setTimelineHeight(lastImageBottom - containerTop);
-    }
+    const updateTimelineHeight = () => {
+      if (ref.current && lastImageRef.current) {
+        const containerTop = ref.current.getBoundingClientRect().top + window.scrollY;
+        const lastImageBottom = lastImageRef.current.getBoundingClientRect().bottom + window.scrollY;
+        const newHeight = lastImageBottom - containerTop;
+        console.log("Timeline Height:", newHeight); // Debug log
+        setTimelineHeight(newHeight);
+      }
+    };
+
+    updateTimelineHeight();
+    window.addEventListener("scroll", updateTimelineHeight);
+    window.addEventListener("resize", updateTimelineHeight);
+    return () => {
+      window.removeEventListener("scroll", updateTimelineHeight);
+      window.removeEventListener("resize", updateTimelineHeight);
+    };
   }, [data, isMobile]);
 
   const { scrollYProgress } = useScroll({
@@ -48,8 +61,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-white dark:text-white max-w-4xl">
-          TimeLine For Concepto25
+        <h2 className="text-lg font-bold md:text-4xl mb-4 text-white dark:text-white max-w-4xl">
+          TimeLine For Concepto'25
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-white text-sm md:text-base max-w-sm">
           “Concepto: Where Ideas Ignite! 🚀 Join us for an electrifying journey of innovation with hackathons, workshops, and limitless possibilities!”
@@ -85,8 +98,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
         {/* Timeline Bar */}
         <div
-          style={{ height: timelineHeight }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+          style={{ height: timelineHeight || "100%" }} // Fallback to 100% if height is 0
+          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_8%,black_92%,transparent_100%)]"
         >
           <motion.div
             style={{
