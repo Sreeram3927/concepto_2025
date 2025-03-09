@@ -102,51 +102,51 @@ export function TimelineDemo() {
             </p>
             <p className="text-neutral-800 text-white white:text-neutral-200 text-xs md:text-sm font-normal mb-0">
               <span className="text-lg md:text-xl font-extrabold block">9:15 AM</span>
-              <span className="text-base md:text-lg block mt-2">ROUND 1</span>
+              <span className="text-base md:text-lg block mt-2">Round 1</span>
               <span className="text-lg md:text-xl font-extrabold block mt-2">10:15 - 11:00 AM</span>
-              <span className="text-base md:text-lg block mt-2">ROUND 1 MENTORING</span>
+              <span className="text-base md:text-lg block mt-2">Round 1 Mentoring</span>
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-rows-2 lg:grid-rows-2 gap-4 mt-4">
             <p className="text-neutral-800 text-white white:text-neutral-200 text-xs md:text-sm font-normal mb-0">
               <span className="text-lg md:text-xl font-extrabold block">11:00 - 11:30 AM</span>
-              <span className="text-base md:text-lg block mt-2">BREAK</span>
+              <span className="text-base md:text-lg block mt-2">Break</span>
             </p>
             <p className="text-neutral-800 text-white white:text-neutral-200 text-xs md:text-sm font-normal mb-0">
               <span className="text-lg md:text-xl font-extrabold block">11:30 PM</span>
-              <span className="text-base md:text-lg block mt-2">ROUND 2 - PARTICIPANTS CAN WORK ON THEIR IDEAS AND PPT</span>
+              <span className="text-base md:text-lg block mt-2">Round 2 - Participants can work on their ideas and presentation</span>
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-rows-2 lg:grid-rows-2 gap-4 mt-4">
             <p className="text-neutral-800 text-white white:text-neutral-200 text-xs md:text-sm font-normal mb-0">
               <span className="text-lg md:text-xl font-extrabold block">12:30 - 1:15 PM</span>
-              <span className="text-base md:text-lg block mt-2">LUNCH BREAK</span>
+              <span className="text-base md:text-lg block mt-2">Lunch BreakK</span>
             </p>
             <p className="text-neutral-800 text-white white:text-neutral-200 text-xs md:text-sm font-normal mb-0">
               <span className="text-lg md:text-xl font-extrabold block">1:30 PM</span>
-              <span className="text-base md:text-lg block mt-2">ROUND 3</span>
+              <span className="text-base md:text-lg block mt-2">Round 3</span>
               <span className="text-lg md:text-xl font-extrabold block mt-2">2:00</span>
-              <span className="text-base md:text-lg block mt-2">2ND MENTORING SESSION</span>
+              <span className="text-base md:text-lg block mt-2">2nd Mentoring Session</span>
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-rows-2 lg:grid-rows-2 gap-4 mt-4">
             <p className="text-neutral-800 text-white white:text-neutral-200 text-xs md:text-sm font-normal mb-0">
               <span className="text-lg md:text-xl font-extrabold block">3:00 PM</span>
-              <span className="text-base md:text-lg block mt-2">FINAL 15 TEAMS ANNOUNCEMENT</span>
+              <span className="text-base md:text-lg block mt-2">Final 15 teams announcement</span>
             </p>
             <p className="text-neutral-800 text-white white:text-neutral-200 text-xs md:text-sm font-normal mb-0">
               <span className="text-lg md:text-xl font-extrabold block">3:05 PM</span>
-              <span className="text-base md:text-lg block mt-2">PRESENTATION STARTS</span>
+              <span className="text-base md:text-lg block mt-2">Presentation Starts</span>
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-rows-2 lg:grid-rows-2 gap-4 mt-4">
             <p className="text-neutral-800 text-white white:text-neutral-200 text-xs md:text-sm font-normal mb-0">
               <span className="text-lg md:text-xl font-extrabold block">4:15</span>
-              <span className="text-base md:text-lg block mt-2">JUDGES WILL WORK ON RESULT / ICEBREAKER ACTIVITIES</span>
+              <span className="text-base md:text-lg block mt-2">Judges will work on results / Icebreaker Activities</span>
             </p>
             <p className="text-neutral-800 text-white white:text-neutral-200 text-xs md:text-sm font-normal mb-0">
               <span className="text-lg md:text-xl font-extrabold block">5:30 PM</span>
-              <span className="text-base md:text-lg block mt-2">EVENT ENDS</span>
+              <span className="text-base md:text-lg block mt-2">Event Ends</span>
             </p>
           </div>
           {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-rows-2 lg:grid-rows-2 gap-4 mt-0">
