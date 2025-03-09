@@ -29,7 +29,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <AboutUs />
-      <Workshop/>
+      {/* <Workshop/> */}
       {/* <Speakers /> */}
       <TimelineDemo /> 
       <SponsorsSection />

@@ -12,23 +12,23 @@ export function Closing() {
             Are you Ready for it?{" "}
             <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
               <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat font-godfather tracking-mid font-normal text-transparent bg-gradient-to-r py-4 from-red to-yellow [text-shadow:0_0_rgba(0,0,0,0.1)]">
-                <span>Concepto 24</span>
+                <span>Concepto 25</span>
               </div>
               <div className="relative bg-clip-text text-transparent bg-no-repeat font-godfather tracking-mid font-normal bg-gradient-to-r from-red to-yellow py-4">
-                <span>Concepto 24</span>
+                <span>Concepto 25</span>
               </div>
             </div>
           </h2>
-          <p className="text-base lg:text-lg leading-relaxed text-white mb-6 text-center">
-            Don't miss out on this incredible opportunity to enhance your design skills and collaborate with like-minded innovators!
-            Whether you're a seasoned designer or just starting out, this event is designed to inspire and challenge you.
-            <br />
+          <p className="text-base lg:text-lg leading-relaxed text-white mb-6 text-justify">
+            Don't miss out on this incredible opportunity to enhance your problem-solving skills and collaborate with like-minded innovators!  
+            Whether you're an experienced thinker or just starting out, this ideathon is designed to inspire and challenge you.  
+            <br /><br />
             Secure your spot today and get ready for a creative journey like no other!
             <br /><br />
             <strong>Registration Fees:</strong>
-            <ul className="mt-4 space-y-2 text-center">
-              <li><strong>INR 170</strong> for IEEE members</li>
-              <li><strong>INR 199</strong> for non-members</li>
+            <ul className="mt-2 space-y-2 text-center">
+              <li><strong>INR 90</strong> for IEEE members</li>
+              <li><strong>INR 100</strong> for non-members</li>
             </ul>
             <br />
             Spaces are limited, so register now to avoid missing out!
