@@ -32,7 +32,7 @@ export function Speakers({ speaker }: { speaker: Speaker }) {
         <CardItem
           as="p"
           translateZ="60"
-          className="text-gray-500 text-justify text-sm sm:text-base max-w-full mt-2 dark:text-neutral-300"
+          className="text-gray-500 text-sm sm:text-base max-w-full mt-2 dark:text-neutral-300"
         >
           {speaker.description}
         </CardItem>
