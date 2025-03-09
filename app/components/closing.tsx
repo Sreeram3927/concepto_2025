@@ -27,9 +27,9 @@ export function Closing() {
             Spaces are limited, so register now to avoid missing out!
           </p>
           <div className="text-center">
-            <button className="mt-4 bg-yellow text-black font-alien font-bold tracking-low text-xl py-2 px-4 rounded-lg hover:opacity-90 transition hover:scale-105 duration-300">
+            <a href="https://konfhub.com/8fc956e1-9f3a-4c6a-b9cc-a7d5880a4ade" className="mt-4 bg-yellow text-black font-alien font-bold tracking-low text-xl py-2 px-4 rounded-lg hover:opacity-90 transition hover:scale-105 duration-300">
               Register
-            </button>
+            </a>
           </div>
         </div>
         {/* Image */}

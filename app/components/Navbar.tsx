@@ -37,6 +37,7 @@ const Navbar = () => {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
                     <div className='ps-px md:py-4 px-4'>
                         <a
+                            href='https://konfhub.com/8fc956e1-9f3a-4c6a-b9cc-a7d5880a4ade'
                             className="group inline-flex items-center gap-x-2 py-2 px-3 bg-yellow hover:bg-red cursor-pointer text-black font-alien tracking-low font-medium text-sm md:text-xl hover:scale-110 transition-all duration-300 ease-in-out rounded-full focus:outline-none"
                         >
                             Register Now
