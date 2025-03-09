@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Concepto 2025 - Unleash Your Creativity in Tech & Design</title>
+        <title>Concepto 2025</title>
         <meta
           name="description"
           content="Join Concepto 2025 for exciting hackathons, design challenges, and workshops. Elevate your tech skills, collaborate with innovators, and showcase your creativity. Open to all tech enthusiasts!"
