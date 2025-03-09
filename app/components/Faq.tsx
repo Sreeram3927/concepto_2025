@@ -27,13 +27,13 @@ export function Faq() {
     {
       title: "Is there a registration fee?",
       description:
-        "Yes, this is a paid event: INR 90 for IEEE members and INR 100 for non-members. The fee covers access to all speaker sessions and the ideathon pitching event on Day 2.",
+        "Yes, this is a paid event for INR 100. The fee covers access to all speaker sessions and the ideathon pitching event on Day 2.",
     },
-    {
-      title: "What should I bring to the event?",
-      description:
-        "Bring a notebook, laptop, charger, and any other materials you might need for brainstorming and pitching your idea. Ensure you have any required presentation materials prepared beforehand.",
-    },
+    // {
+    //   title: "What should I bring to the event?",
+    //   description:
+    //     "Bring a notebook, laptop, charger, and any other materials you might need for brainstorming and pitching your idea. Ensure you have any required presentation materials prepared beforehand.",
+    // },
     {
       title: "What is the structure of the event?",
       description:
@@ -64,11 +64,11 @@ export function Faq() {
       description:
         "Yes, all participants will receive a certificate of participation. Special awards will also be given to standout teams or individuals.",
     },
-    // {
-    //   title: "What is the cancellation/refund policy?",
-    //   description:
-    //     "Unfortunately, registration fees are non-refundable. However, if there are unforeseen circumstances, we will notify participants and explore potential alternatives.",
-    // },
+    {
+      title: "What is the cancellation/refund policy?",
+      description:
+        "Unfortunately, registration fees are non-refundable. However, if there are unforeseen circumstances, we will notify participants and explore potential alternatives.",
+    },
   ];
 
   return (

@@ -24,13 +24,6 @@ export function Closing() {
             Whether you're an experienced thinker or just starting out, this ideathon is designed to inspire and challenge you.  
             <br /><br />
             Secure your spot today and get ready for a creative journey like no other!
-            <br /><br />
-            <strong>Registration Fees:</strong>
-            <ul className="mt-2 space-y-2 text-center">
-              <li><strong>INR 90</strong> for IEEE members</li>
-              <li><strong>INR 100</strong> for non-members</li>
-            </ul>
-            <br />
             Spaces are limited, so register now to avoid missing out!
           </p>
           <div className="text-center">
