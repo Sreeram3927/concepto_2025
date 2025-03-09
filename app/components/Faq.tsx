@@ -18,6 +18,59 @@ export function Faq() {
     }
   }, [controls, inView]);
 
+  const questions = [
+    {
+      title: "Who can participate in Concepto 2025?",
+      description:
+        "Concepto 2025 is open to all students and tech enthusiasts! Whether you're a beginner or an experienced innovator, you are welcome to join!",
+    },
+    {
+      title: "Is there a registration fee?",
+      description:
+        "Yes, this is a paid event: INR 90 for IEEE members and INR 100 for non-members. The fee covers access to all speaker sessions and the ideathon pitching event on Day 2.",
+    },
+    {
+      title: "What should I bring to the event?",
+      description:
+        "Bring a notebook, laptop, charger, and any other materials you might need for brainstorming and pitching your idea. Ensure you have any required presentation materials prepared beforehand.",
+    },
+    {
+      title: "What is the structure of the event?",
+      description:
+        "Day 1 will consist of speaker sessions, while Day 2 will focus on the ideathon pitching event. Participants will have the opportunity to present their ideas to a panel of judges.",
+    },
+    {
+      title: "Can I pitch an idea that I've worked on before?",
+      description:
+        "Yes, you can pitch a previously worked-on idea. However, originality and innovation will be key judging criteria.",
+    },
+    {
+      title: "Are there prizes or awards?",
+      description:
+        "Yes, participants have the chance to win exciting prizes and recognition for outstanding ideas. Details on prizes will be announced during the event.",
+    },
+    {
+      title: "Do I need to have a team?",
+      description:
+        "You can participate solo or in teams. If you don't have a team, you will have the opportunity to connect with other participants at the event to form teams.",
+    },
+    {
+      title: "Where will the event be held?",
+      description:
+        "The event will take place at Mini Hall 2 (T P Ganesan). More specific instructions regarding the venue will be shared with registered participants closer to the event.",
+    },
+    {
+      title: "Will I receive a certificate for participating?",
+      description:
+        "Yes, all participants will receive a certificate of participation. Special awards will also be given to standout teams or individuals.",
+    },
+    // {
+    //   title: "What is the cancellation/refund policy?",
+    //   description:
+    //     "Unfortunately, registration fees are non-refundable. However, if there are unforeseen circumstances, we will notify participants and explore potential alternatives.",
+    // },
+  ];
+
   return (
     <section ref={ref}>
       <motion.div
@@ -34,10 +87,10 @@ export function Faq() {
             Frequently Asked Questions
           </h2>
           <h4 className="max-w-screen-sm mx-auto font-sans font-base text-neutral-400 text-sm sm:text-lg">
-            Have questions about Concepto'24? We're here to help! Whether you're curious about event details, participation guidelines, or anything in between, our FAQ section has you covered. Let's clear up any doubts and ensure you're ready to dive into the Designathon experience with confidence!
+            Have questions about Concepto'25? We're here to help! Whether you're curious about event details, participation guidelines, or anything in between, our FAQ section has you covered. Let's clear up any doubts and ensure you're ready to dive into the Designathon experience with confidence!
           </h4>
           <div className="max-w-5xl mx-auto">
-            <HoverEffect items={projects} />
+            <HoverEffect items={questions} />
           </div>
         </div>
         
@@ -45,66 +98,3 @@ export function Faq() {
     </section>
   );
 }
-export const projects = [
-  // {
-  //   title: "What is Concepto 2024?",
-  //   description:
-  //     "Concepto 2024 is a two-day event packed with exciting hackathons, designathons, workshops, and challenges aimed at helping participants enhance their tech and design skills. Whether you’re a seasoned developer, designer, or just getting started, Concepto 2024 is a great platform to learn, collaborate, and innovate.",
-  // },
-  {
-    title: "Who can participate in Concepto 2024?",
-    description:
-      "Concepto 2024 is open to all students and tech enthusiasts! Whether you're a beginner or an experienced coder/designer.",
-  },
-  {
-    title: "Is there a registration fee?",
-    description:
-      "Yes, there is a registration fee: INR 170 for IEEE members and INR 199 for non-members. The fee covers access to all events, workshops, and resources provided during the two days.",
-  },
-  // {
-  //   title: "How do I register for the event?",
-  //   description:
-  //     "You can register for the event by clicking on the Register button on our official Concepto 2024 webpage. Make sure to complete the registration process and pay the required fees to secure your spot.",
-  // },
-  {
-    title: "What should I bring to the event?",
-    description:
-      "Bring a laptop, charger, and any other equipment you might need for coding or designing. Make sure your development environment is set up beforehand to maximize your productivity.",
-  },
-  {
-    title: "Will there be mentorship or guidance during the event?",
-    description:
-      "Yes, we will have mentors available throughout the event to help guide participants through the workshops and the hackathon.",
-  },
-  // {
-  //   title: "What is the structure of the event?",
-  //   description:
-  //     "The event is divided into two main parts: Day 1 focuses on learning, with workshops on UI/UX design, coding best practices, and design principles. Day 2 features a hackathon and designathon where participants can apply the knowledge gained from Day 1 to create projects, prototypes, or designs.",
-  // },
-  {
-    title: "Are there prizes or awards?",
-    description:
-      "Yes, participants have the chance to win exciting prizes and recognition for outstanding projects. Details on prizes will be announced during the event.",
-  },
-  {
-    title: "Do I need to have a team?",
-    description:
-      "You can participate solo or in teams. If you don't have a team, you will have the opportunity to connect with other participants at the event to form teams.",
-  },
-  {
-    title: "Where will the event be held?",
-    description:
-      "The event will take place at Mini Hall 2 (T P Ganesan). More specific instructions regarding the venue will be shared with registered participants closer to the event.",
-  },
-  {
-    title: "Will I receive a certificate for participating?",
-    description:
-      "Yes, all participants will receive a certificate of participation. Special awards will also be given to standout teams or individuals.",
-  },
-  {
-    title: "What is the cancellation/refund policy?",
-    description:
-      "Unfortunately, registration fees are non-refundable. However, if there are unforeseen circumstances, we will notify participants and explore potential alternatives.",
-  },
-];
-
