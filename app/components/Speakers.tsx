@@ -12,29 +12,39 @@ type Speaker = {
   imagePath: string;
 };
 
-export function Speakers({ speaker } : { speaker: Speaker }) {
+export function Speakers({ speaker }: { speaker: Speaker }) {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+      <CardBody className="relative group/card bg-white/10 border border-white/20 transition-all duration-300 ease-in-out hover:bg-white/20 hover:border-white/30 dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] w-auto max-w-[15rem] sm:max-w-[30rem] sm:w-[30rem] h-auto rounded-xl p-6">
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-neutral-600 dark:text-white"
+          className="text-lg sm:text-xl font-bold text-white dark:text-white"
         >
           {speaker.name}
         </CardItem>
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+          className="text-white text-sm sm:text-base max-w-full mt-2 dark:text-neutral-300"
         >
           {speaker.role}
         </CardItem>
-        <CardItem translateZ="100" className="w-full mt-4">
+        <CardItem
+          as="p"
+          translateZ="60"
+          className="text-gray-500 text-justify text-sm sm:text-base max-w-full mt-2 dark:text-neutral-300"
+        >
+          {speaker.description}
+        </CardItem>
+        <CardItem 
+          translateZ="100" 
+          className="w-full mt-4 flex justify-center items-center"
+        >
           <Image
             src={speaker.imagePath}
-            height={300}
-            width={300}
-            className="object-cover rounded-xl group-hover/card:shadow-xl"
+            height={250}
+            width={250}
+            className="w-full max-w-[250px] sm:max-w-[300px] object-cover rounded-xl group-hover/card:shadow-xl"
             alt={speaker.name}
           />
         </CardItem>

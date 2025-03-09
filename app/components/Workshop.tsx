@@ -1,19 +1,18 @@
 "use client";
 import { Speakers } from "./Speakers";
 
-
 export function Workshop() {
   const speakersData = [
     {
       name: "Mayil Vaganan Pandiyan",
-      role: "AI Researcher",
-      description: "An expert in artificial intelligence and machine learning, specializing in autonomous systems.",
+      role: "FOUNDER CEO-Ellar Metal Parts",
+      description: "Indian Air Force veteran with over 30 years of experience in Quality Management Systems and Manufacturing. Manufacturer of Automotive and Aviation metallic parts. Motivational Speaker and Trainer.",
       imagePath: "/img/speakers/mayil_vagan_pandayan.jpg",
     },
     {
       name: "Harish",
-      role: "Software Engineer",
-      description: "A full-stack developer with a passion for building scalable and efficient web applications.",
+      role: "Financial Consultant",
+      description: "Finance and investment expert with a passion for empowering individuals to achieve financial freedom. Motivational speaker and educator dedicated to simplifying complex financial concepts for everyone.",
       imagePath: "/img/speakers/harish.jpeg",
     },
   ];
@@ -28,7 +27,9 @@ export function Workshop() {
           Meet our expert speakers who are leaders in their respective fields, bringing years of
           experience and insights to share with you.
         </p>
-        <div className="flex space-x-12">
+
+        {/* Responsive Layout for Speakers with Tight Spacing in Column Mode */}
+        <div className="flex flex-col sm:flex-row flex-wrap mt-6 justify-start sm:justify-center items-center sm:items-center -space-y-4 sm:space-y-0 sm:gap-8">
           {speakersData.map((speaker, index) => (
             <Speakers key={index} speaker={speaker} />
           ))}
@@ -37,4 +38,3 @@ export function Workshop() {
     </div>
   );
 }
-
