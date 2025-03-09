@@ -8,6 +8,7 @@ import { Hero } from "./components/Hero";
 import { TimelineDemo } from "./components/timeline";
 import { Workshop } from "./components/Workshop";
 import { Speakers } from "./components/Speakers";
+import SponsorsSection from "./components/Sponsors";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <Workshop/>
       {/* <Speakers /> */}
       <TimelineDemo /> 
+      <SponsorsSection />
       <Faq />
       <Closing />
       <Footer />
