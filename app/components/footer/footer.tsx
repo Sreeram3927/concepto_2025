@@ -42,7 +42,7 @@ const Footer = () => {
                         }}
                         aria-label="logo"
                     >
-                        Concepto'24
+                        Concepto'25
                     </a>
                 </motion.div>
 
@@ -75,7 +75,7 @@ const Footer = () => {
                             </a>{' '}
                             family.
                         </p>
-                        <p className="font-sans font-base text-white text-xs sm:text-normal">© 2024 IEEE SRM. All rights reserved.</p>
+                        <p className="font-sans font-base text-white text-xs sm:text-normal">© 2025 IEEE SRM. All rights reserved.</p>
                     </div>
                 </div>
 
